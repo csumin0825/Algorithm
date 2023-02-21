@@ -6,10 +6,10 @@ function dfs(graph, startNode) {
 
   needVisit.push(startNode);
   while (needVisit.length !== 0) {
-    const node = needVisit.pop();
+    const node = needVisit.shift();
     if (!visited.includes(node)) {
       visited.push(node);
-      needVisit = [...needVisit, ...graph[node]];
+      needVisit = [...graph[node], ...needVisit];
     }
   }
   return visited;
