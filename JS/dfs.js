@@ -10,6 +10,8 @@ function dfs(graph, startNode) {
     if (!visited.includes(node)) {
       visited.push(node);
       needVisit = [...graph[node], ...needVisit];
+      //   console.log(needVisit);
+      //   needVisit = [...needVisit, ...graph[node]];
     }
   }
   return visited;
